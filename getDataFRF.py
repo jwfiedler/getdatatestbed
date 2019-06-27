@@ -239,7 +239,7 @@ class getObs:
              valid values: [3, 4, False]  False will not remove any data
 
         Keyword Args:
-            "a&b" (bool): if this is True function will return a's and b's for time period
+            "ab" (bool): if this is True function will return a's and b's for time period
             "specOnly" (bool); if this is True function will not return bulk statistics
 
         Returns:
@@ -332,7 +332,7 @@ class getObs:
                     wavespec['waveDm'] = self.ncfile['waveMeanDirection'][self.wavedataindex]
                     wavespec['qcFlagE'] = self.ncfile['qcFlagE'][self.wavedataindex]
                     wavespec['qcFlagD'] = self.ncfile['qcFlagD'][self.wavedataindex]
-                    if 'a&b' in kwargs and kwargs['a&b'] is True:
+                    if 'ab' in kwargs and kwargs['ab'] is True:
                         wavespec['a1'] = self.ncfile['waveA1Value'][self.wavedataindex, :]
                         wavespec['a2'] = self.ncfile['waveA2Value'][self.wavedataindex, :]
                         wavespec['b1'] = self.ncfile['waveB1Value'][self.wavedataindex, :]
@@ -466,7 +466,7 @@ class getObs:
                     wavespec['waveDm'] = self.ncfile['waveMeanDirection'][self.wavedataindex]
                     wavespec['qcFlagE'] = self.ncfile['qcFlagE'][self.wavedataindex]
                     wavespec['qcFlagD'] = self.ncfile['qcFlagD'][self.wavedataindex]
-                    if 'a&b' in kwargs and kwargs['a&b'] is True:
+                    if 'ab' in kwargs and kwargs['ab'] is True:
                         wavespec['a1'] = self.ncfile['waveA1Value'][self.wavedataindex, :]
                         wavespec['a2'] = self.ncfile['waveA2Value'][self.wavedataindex, :]
                         wavespec['b1'] = self.ncfile['waveB1Value'][self.wavedataindex, :]
